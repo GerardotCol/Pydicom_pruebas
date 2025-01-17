@@ -48,7 +48,7 @@ def check_dicom_association():
         previous_status = current_status
 
 # Schedule the function to run every 5 minutes
-schedule.every(5).minutes.do(check_dicom_association)
+schedule.every(1).minutes.do(check_dicom_association)
 
 # Keep the script running
 while True:
