@@ -14,7 +14,7 @@ from pynetdicom import AE, debug_logger
 
 # Se inicia el debug para visualizar informacion sobre el estado de la conexión 
 
-# debug_logger()
+debug_logger()
 
 ae = AE() # creates a new AE instance
 ae.add_requested_context("1.2.840.10008.1.1")
@@ -49,7 +49,7 @@ assoc = ae.associate("127.0.0.1", 11112)
 
 if assoc.is_established:
     print("Association established with Echo SCP!")
-    #status = assoc.send_c_echo()
+    status = assoc.send_c_echo()
     assoc.release()
 else:
     # Association rejected, aborted or never connected

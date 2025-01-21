@@ -18,7 +18,7 @@ previous_status = None
 
 def send_email_notification(status):
     msg = MIMEText(f"Association status: {status}")
-    msg["Subject"] = "DICOM Association Notification"
+    msg["Subject"] = {status}
     msg["From"] = email_sender
     msg["To"] = email_reciver
 
@@ -36,11 +36,11 @@ def check_dicom_association():
     assoc = ae.associate("127.0.0.1", 11112)
 
     if assoc.is_established:
-        current_status = "established"
+        current_status = "Monitor is UP"
         print("Association established with Echo SCP!")
         assoc.release()
     else:
-        current_status = "failed"
+        current_status = "Mnonitor is DOWN"
         print("Failed to associate")
 
     if current_status != previous_status:

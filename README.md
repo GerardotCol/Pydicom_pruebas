@@ -10,4 +10,8 @@ _Este es texto en cursiva_
 
 <ins>Subrayado</ins>
 
+Acivar entorno virtual
+
+.\venv\Scripts\activate
+
 
