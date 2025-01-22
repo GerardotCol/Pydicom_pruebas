@@ -12,6 +12,12 @@ _Este es texto en cursiva_
 
 Acivar entorno virtual
 
+Windows
+
 .\venv\Scripts\activate
+
+Linux
+
+source Denv/bin/activate
 
 
