@@ -22,7 +22,6 @@ def handle_find(event):
         # Failure
         yield 0xC000, None
         return
-
     if ds.QueryRetrieveLevel == 'PATIENT':
         if 'PatientName' in ds:
             if ds.PatientName not in ['*', '', '?']:
