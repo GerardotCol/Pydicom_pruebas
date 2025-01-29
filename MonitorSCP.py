@@ -14,6 +14,8 @@ email_sender = "ge.dardo@gmail.com"
 password = os.getenv("PASSWORD")
 email_reciver = "gcollado@impulso-mexicano.com"
 
+# Associate with the peer AE at IP 127.0.0.1 and port 11112
+
 previous_status = None
 
 def send_email_notification(status):

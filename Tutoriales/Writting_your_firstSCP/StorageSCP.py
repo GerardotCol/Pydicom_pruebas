@@ -7,6 +7,8 @@ Let’s create a simple Storage SCP for receiving CT Image datasets encoded usin
 VR Little Endian transfer syntax. Create a new file my_scp.py, open it in a text editor and add 
 the following:
 
+$ python -m pynetdicom storescu 127.0.0.1 11112 image-00000.dcm-v -cx
+
 """
 
 debug_logger()
